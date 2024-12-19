@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Gallery's Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F3F4ED;
+        }
+
+
+/* Header Styling */
+	header {
+		position: relative;
+		background-image: url('headergallery.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		color: white;
+		text-align: center;
+		padding: 100px 20px;
+		}
+
+	header::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 1;
+		}
+
+	header h1 {
+		position: relative;
+		z-index: 2;
+		font-size: 75px;
+		font-family: 'Playfair Display', serif;
+		font-style: italic;
+		color: white;
+		margin: 0;
+		}
+
+ /* Main Navigation Bar */
+
+	nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 100px;
+		padding: 10px;
+		background-color: rgba(255, 255, 255, 0.8);
+		border-bottom: 2px solid #ccc;
+		position: relative;
+		z-index: 2;
+		margin-top: 40px;
+		}
+
+	.nav-link {
+		color: #333;
+		text-decoration: none;
+		font-size: 18px;
+		 font-family: 'Arial', serif;
+		margin: 0 15px;
+		position: relative;
+		transition: color 0.3s ease;
+		}
+
+	.nav-link::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: #4CAF50;
+		transition: width 0.3s ease;
+		position: absolute;
+		bottom: -5px;
+		left: 50%;
+		transform: translateX(-50%);
+		}
+
+	.nav-link:hover {
+		color: #1F4529;
+		}
+
+        .nav-link:hover::after {
+            width: 100%;
+		}
+
+       .gallery-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover .caption {
+            opacity: 1;
+        }
+
+        /* Go Back Button Styling */
+
+	.go-back-button {
+		font-family: 'Playfair Display', serif;
+		font-style: italic;
+		font-size: 18px;
+		padding: 15px 30px;
+		margin-top: 20px; /* Add space above the button */
+		margin-bottom: 40px; /* Add space below the button */
+		background-color: #859F3D;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		}
+
+	.go-back-button:hover {
+		background-color: #294B29;
+		}
+
+/* Footer Styling */
+
+	footer {
+		background: #1F4529;
+		padding: 20px 0;
+		}
+
+        footer div {
+		display: flex;
+		justify-content: center;
+		gap: 30px;
+		margin-bottom: 20px;
+		}
+
+	footer a img {
+		width: 40px;
+		height: 40px;
+		transition: transform 0.3s;
+		}
+
+        footer a img:hover {
+		transform: scale(1.2);
+		}
+
+        footer p {
+		margin: 0;
+		text-align: center;
+		color: white;
+		}
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>My Gallery</h1>
+
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="resume biodata.html" class="nav-link">Biodata</a>
+            <a href="resume education.html" class="nav-link">Education</a>
+            <a href="resume experience.html" class="nav-link">Experience</a>
+            <a href="resume family.html" class="nav-link">Family</a>
+        </nav>
+
+    </header>
+<main>
+    <div class="gallery-container">
+        <div class="gallery-grid">
+
+            <!-- Gallery Items -->
+            <div class="gallery-item">
+                <img src="1.jpeg" alt="Image 1">
+                <div class="caption">Syed, Sharifahs <3</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="2.jpeg" alt="Image 2">
+                <div class="caption">Sorak 2023</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="3.jpeg" alt="Image 3">
+                <div class="caption">Forever solehot girls!</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="4.jpeg" alt="Image 4">
+                <div class="caption">Ayah and Ummi visits <3</div>
+            </div>
+            <div class="gallery-item">
+                <img src="5.jpeg" alt="Image 5">
+                <div class="caption">KKEC Kelantan</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="6.jpeg" alt="Image 6">
+                <div class="caption">squad pecah perut</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="7.jpeg" alt="Image 7">
+                <div class="caption">Taman Rama Rama with Farah!</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="8.jpeg" alt="Image 8">
+                <div class="caption">Larian 10K with Jengking!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="9.jpeg" alt="Image 9">
+                <div class="caption">Jengking night, Kembara makan durian!</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="10.jpeg" alt="Image 10">
+                <div class="caption">My saviour and non winged angel!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="11.jpeg" alt="Image 11">
+                <div class="caption">Random cat who wants me <3</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="12.jpeg" alt="Image 12">
+                <div class="caption">Sorak 2024</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="13.jpeg" alt="Image 13">
+                <div class="caption">My kind of KLCC</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="14.jpeg" alt="Image 14">
+                <div class="caption">My once partner in crime!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="15.jpeg" alt="Image 15">
+                <div class="caption">Did so well with the presentation!</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="16.jpeg" alt="Image 16">
+                <div class="caption">a memoribilia to keep!</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="17.jpeg" alt="Image 17">
+                <div class="caption">trio highschool until now <3</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="18.jpeg" alt="Image 18">
+                <div class="caption">f4 that has my heart and comfy</div>
+            </div>
+            <div class="gallery-item">
+                <img src="19.jpeg" alt="Image 19">
+                <div class="caption">Larian with usahawan before KKEC</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="20.jpeg" alt="Image 20">
+                <div class="caption">orienteering core</div>
+            </div>
+            <div class="gallery-item">
+                <img src="21.jpeg" alt="Image 21">
+                <div class="caption">f4 again, the vibes is voila!</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="22.jpeg" alt="Image 22">
+                <div class="caption">Presentation with them was lovely!!</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="23.jpeg" alt="Image 23">
+                <div class="caption">Kembara wanita that has all my hearts through uni days <3 <3</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="24.jpeg" alt="Image 24">
+                <div class="caption">Perkom Night with kembara</div>
+            </div>
+            <div class="gallery-item">
+                <img src="25.jpeg" alt="Image 25">
+                <div class="caption">a trip to remember <3</div>
+            </div>
+
+
+        </div>
+    </div>
+
+    </main>
+
+
+	<center>
+		<button class="go-back-button" onclick="history.back()">
+		Go Back
+		</button>
+	</center>
+
+<footer>
+
+	<div>
+		<a href="https://wa.me/+60125153448" target="_blank"><img src="whatsapp.png"></a>
+		<a href="https://mail.google.com/mail/?view=cm&fs=1&to=qasrienarohaimi@gmail.com" target="_blank"><img src="gmail.png"></a>
+		<a href="https://www.instagram.com/ameeraqsrna/profilecard" target="_blank"><img src="ig.png"></a>
+	</div>
+
+	<p>&copy; 2024 Ameera Rohaimi. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
