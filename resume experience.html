@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Experience's Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* Header Styling */
+        header {
+            position: relative;
+            background-image: url('headerexperience.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 75px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: white;
+            margin: 0;
+        }
+
+        /* Main Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 2px solid #ccc;
+            position: relative;
+            z-index: 2;
+            margin-top: 40px;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+		 font-family: 'Arial', serif;
+            margin: 0 15px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #4CAF50;
+            transition: width 0.3s ease;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover {
+            color: #1F4529;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            margin: 20px 0;
+        }
+
+/* Sidebar Navigation */
+
+	.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		left: 0;
+		background-color: #111;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+		}
+
+	.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #859F3D;
+		display: block;
+		transition: 0.3s;
+		}
+
+	.sidenav a:hover {
+		color: #1F4529;
+		}
+
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+		}
+
+	.sidebar-header {
+		text-align: center;
+		margin-bottom: 20px;
+		}
+
+        .sidebar-header img {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		margin-bottom: 10px;
+		}
+
+	.sidebar-header p {
+		color: #F1F1F1;
+		font-family: 'Playfair Display', serif;
+		font-size: 30px;
+		font-weight: bold;
+		text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), 0 0 25px rgba(255, 255, 255, 0.3), 0 0 5px rgba(255, 255, 255, 0.2);
+		}
+
+	.openbtn {
+		font-size: 20px;
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		background-color: #859F3D;
+		color: white;
+		padding: 10px 15px;
+		border-radius: 3px;
+		cursor: pointer;
+		z-index: 1050;
+		}
+
+	.openbtn:hover {
+		background-color: #294B29;
+		}
+
+
+/* Biodata Section */
+	section {
+		max-width: 800px;
+		margin: 40px auto;
+		text-align: center;
+		padding: 20px;
+		background-color: #ffffff;
+		border-radius: 10px;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+	section h2 {
+		font-family: 'Playfair Display', serif;
+		font-weight: bold;
+		font-size: 40px;
+		color: #294B29;
+		}
+
+	section p, ol, ul {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 23px;
+		color: #294B29;
+		text-align: justify;
+		margin: 20px auto;
+		line-height: 1.6;
+		}
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Styling for the first column (Playfair font) */
+table td:first-child, table th:first-child {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Styling for the second column (Roboto Condensed font) */
+table td:nth-child(2), table th:nth-child(2) {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Styling for table cells with a 2px border */
+th, td {
+    border: 2px solid #294B29; /* 2px border for table cells */
+    text-align: left;
+    padding: 8px;
+}
+
+
+        /* Go Back Button Styling */
+        .go-back-button {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 18px;
+            padding: 15px 30px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            background-color: #859F3D;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .go-back-button:hover {
+            background-color: #294B29;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #1F4529;
+            padding: 20px 0;
+        }
+
+        footer div {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        footer a img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+
+        footer a img:hover {
+            transform: scale(1.2);
+        }
+
+        footer p {
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body style="background-color:#D0E8C5;">
+
+	<div id="sideNav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="sidebar-header">
+	<img src="logo.jpg" alt="Logo">
+	<p>Ameera Rohaimi</p>
+        </div>
+
+        <a href="#intern">More About Me</a>
+        <a href="#other">Growing Up</a>
+	</div>
+
+	<span class="openbtn" onclick="openNav()">&#9776;</span>
+
+<script>
+	function openNav() {
+		document.getElementById("sideNav").style.width = "250px";
+	}
+
+	function closeNav() {
+		document.getElementById("sideNav").style.width = "0";
+        }
+</script>
+    <header>
+
+        <h1>My Experience</h1>
+
+        <nav>
+            <a href="resume home page.html" class="nav-link">Home</a>
+            <a href="resume biodata.html" class="nav-link">Biodata</a>
+            <a href="resume education.html" class="nav-link">Education</a>
+            <a href="resume family.html" class="nav-link">Family</a>
+            <a href="resume gallery.html" class="nav-link">Gallery</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+<section id="intern">
+
+	<h2>2024 Internship</h2>
+
+	<div style="text-align: center;">
+	<img src="mpk.png" alt="mpk" style="border-radius: 15px; border: 4px solid #294B29; width:350px; height:auto;">
+<table>
+    <tr>
+        <th>Company</th>
+        <td>Majlis Perbandaran Kemaman</td>
+    </tr>
+    <tr>
+        <th>Position</th>
+        <td>Internship Student</td>
+    </tr>
+    <tr>
+        <th>Duration</th>
+        <td>July 21, 2024 - September 12, 2024</td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td>I did manage to key in data to open new files for customer in Licensing Department. I also did some filing, appraisal, and file disposition. I went for the field work, checking the documents from store, or shop lot. The department also had few meetings that I had to fill in and complete the documentation.</td>
+    </tr>
+</table>
+
+	</div>
+
+</section>
+
+
+<section id="other">
+
+	<h2>2022 Part Timing</h2>
+
+	<div style="text-align: center;">
+	<img src="taska.jpg" alt="taska" style="border-radius: 15px; border: 4px solid #294B29; width:350px; height:auto;">
+	<table>
+    <tr>
+        <th>Company</th>
+        <td>Taska Al Iman</td>
+    </tr>
+    <tr>
+        <th>Position</th>
+        <td>Children Care Taker / Kindergarden Teacher</td>
+    </tr>
+    <tr>
+        <th>Duration</th>
+        <td>May 10, 2022 - June 30, 2022</td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td>I take care of children. Other than that, I take part in cooking and teaching them. We had a routined activities. Handling children is never easy but taking care of them through the right and comfortable skill will make it easier to manage.</td>
+    </tr>
+</table>
+
+	</div>
+
+</section>
+    </main>
+
+    <center>
+        <button class="go-back-button" onclick="history.back()">Go Back</button>
+    </center>
+
+    <footer>
+        <div>
+            <a href="https://wa.me/+60125153448" target="_blank"><img src="whatsapp.png" alt="WhatsApp"></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=qasrienarohaimi@gmail.com" target="_blank"><img src="gmail.png" alt="Gmail"></a>
+            <a href="https://www.instagram.com/ameeraqsrna/profilecard" target="_blank"><img src="ig.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Ameera Rohaimi. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
